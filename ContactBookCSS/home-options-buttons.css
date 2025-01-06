@@ -4,11 +4,13 @@
     margin-top: 20px;
     margin-left: 5px;
 }
-.create-button,
+.create-account-button,
 .reset-password-button,
 .home-button,
 .log-in-button,
-.forgot-password-button
+.forgot-password-button,
+.create-button,
+.account-log-in-button
 {
     font-size: medium;
     height: 30px;
@@ -19,14 +21,15 @@
     color: #a63a3a;
     margin-right: 10px;
 }
-.create-button:hover,
+.create-account-button:hover,
 .reset-password-button:hover,
 .home-button:hover,
 .log-in-button:hover,
 .forgot-password-button:hover{
     background-color: #9de59d;
 }
-.submit-button {
+.submit-button
+{
     font-size: large;
     height: 45px;
     width: 75px;
@@ -36,6 +39,19 @@
     color: #9de59d;
     margin-right: 10px;
 }
-.submit-button:hover {
+.create-button,
+.account-log-in-button
+{
+    width: 395px;
+    background-color: #9de59d;
+}
+.create-button:hover,
+.account-log-in-button:hover
+{
+    background-color: #a63a3a;
+    color: #9de59d;
+}
+.submit-button:hover
+{
     background-color: #a63a3a;
 }
