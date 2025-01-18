@@ -1,9 +1,14 @@
 body {
-    background-color: gray;
+    background-color: grey;
     font-family: Laksaman, Arial, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 p {

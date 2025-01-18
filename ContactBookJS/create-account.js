@@ -57,7 +57,7 @@ export function renderCreateAccount(){
 function renderAccountCreatedBox() {
     document.querySelector('.js-body').innerHTML =
         '<div class="account-created-box">\n' +
-        '    <p>\n' +
+        '    <p class="account-created-box-text">\n' +
         '        Account Created Please Log In\n' +
         '    </p>\n' +
         '</div>'
