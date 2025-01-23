@@ -37,5 +37,10 @@ export function renderResetPassword(){
         '        </div>';
 
     document.querySelector('.js-home-button')
-        .addEventListener('click', () => {runScript()});
+        .addEventListener('click', () => {runScript()})
+
+    document.querySelector('.submit-button')
+        .addEventListener('click', () => {
+            location.href = 'home.html';
+        })
 }

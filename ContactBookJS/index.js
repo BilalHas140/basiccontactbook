@@ -16,6 +16,10 @@ export function runScript() {
         .addEventListener('click', () => {
             renderResetPassword()
         });
+    document.querySelector('.submit-button')
+        .addEventListener('click', () => {
+           location.href = 'home.html';
+        })
 }
 
 
