@@ -50,23 +50,27 @@ export function runScript() {
     <div class="main-container">
          <div class="contact-actions-panel">
             <div class="side-option-block">
+                <button class="side-option-button">+</button>
                 <li class="bullet"></li>
-                Add Contact
+                Add
+            </div>
+            
+            <div class="side-option-block">   
+                <button class="side-option-button">U</button>         
+                <li class="bullet"></li>
+                Update
             </div>
             
             <div class="side-option-block">
+                <button class="side-option-button">-</button>
                 <li class="bullet"></li>
-                Update Contact
+                Delete
             </div>
             
             <div class="side-option-block">
+                <button class="side-option-button">--</button>
                 <li class="bullet"></li>
-                Delete A Contact
-            </div>
-            
-            <div class="side-option-block">
-                <li class="bullet"></li>
-                Delete All Contacts
+                Delete All
             </div>
         </div>
         
