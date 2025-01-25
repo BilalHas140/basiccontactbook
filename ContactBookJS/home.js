@@ -1,4 +1,5 @@
-import {contactList} from "./Contact.js";
+import {contactList} from "./contact.js";
+import {renderAddContact} from "./add-contact.js";
 
 runScript();
 
@@ -50,25 +51,25 @@ export function runScript() {
     <div class="main-container">
          <div class="contact-actions-panel">
             <div class="side-option-block">
-                <button class="side-option-button">+</button>
+                <button class="side-option-button add-contact-button">+</button>
                 <li class="bullet"></li>
                 Add
             </div>
             
             <div class="side-option-block">   
-                <button class="side-option-button">U</button>         
+                <button class="side-option-button update-contact-button">U</button>         
                 <li class="bullet"></li>
                 Update
             </div>
             
             <div class="side-option-block">
-                <button class="side-option-button">-</button>
+                <button class="side-option-button delete-contact-button">-</button>
                 <li class="bullet"></li>
                 Delete
             </div>
             
             <div class="side-option-block">
-                <button class="side-option-button">--</button>
+                <button class="side-option-button delete-all-button">--</button>
                 <li class="bullet"></li>
                 Delete All
             </div>
@@ -76,9 +77,14 @@ export function runScript() {
         
         <div class="home-contacts-container" id="div-container">
         </div>
-    </div>
-`
+    </div>`
+
+    document.querySelector('.add-contact-button')
+        .addEventListener('click', () => {
+            renderAddContact();
+        })
+
     document.querySelector('.home-contacts-container').innerHTML =
         addDiv('div-container', 'contact-block');
-}
 
+}
