@@ -1,5 +1,6 @@
 import {contactList} from "./contact.js";
 import {renderAddContact} from "./add-contact.js";
+import {addSelectionButtons} from "./update-contact.js";
 
 runScript();
 
@@ -82,6 +83,10 @@ export function runScript() {
     document.querySelector('.add-contact-button')
         .addEventListener('click', () => {
             renderAddContact();
+        })
+    document.querySelector('.update-contact-button')
+        .addEventListener('click', () => {
+            addSelectionButtons();
         })
 
     document.querySelector('.home-contacts-container').innerHTML =

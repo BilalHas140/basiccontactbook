@@ -37,5 +37,22 @@
         saveToStorage();
     }
 
+   export function updateContact(updateContactName, newContactType, newContactName, newFirstName,
+                           newLastName, newAddress, newPhoneNumber, newEmail){
+
+        contactList.map((contact)=>{
+            if (contact.contactName === updateContactName){
+                contact.contactType = newContactType;
+                contact.contactName = newContactName;
+                contact.firstName = newFirstName;
+                contact.lastName = newLastName;
+                contact.address = newAddress;
+                contact.phoneNumber = newPhoneNumber;
+                contact.email = newEmail;
+            }
+        })
+       saveToStorage();
+    }
+
 
 
