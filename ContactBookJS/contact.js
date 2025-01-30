@@ -54,5 +54,16 @@
        saveToStorage();
     }
 
+    export function deleteAContact(contactName){
+        contactList.map((contact)=>{
+            if (contact.contactName === contactName){
+                contactList.splice(contactList.indexOf(contact), 1);
+            }
+        })
+        saveToStorage();
+    }
+
+
+
 
 
