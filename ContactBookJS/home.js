@@ -2,6 +2,7 @@ import {contactList} from "./contact.js";
 import {renderAddContact} from "./add-contact.js";
 import {addSelectionButtons} from "./update-contact.js";
 import {addRemoveButtons} from "./delete-contact.js";
+import {verifyDeleteAll} from "./delete-all-contacts.js";
 
 runScript();
 
@@ -92,6 +93,10 @@ export function runScript() {
     document.querySelector('.delete-contact-button')
         .addEventListener('click', () => {
             addRemoveButtons();
+        })
+    document.querySelector('.delete-all-button')
+        .addEventListener('click', () => {
+            verifyDeleteAll();
         })
 
     document.querySelector('.home-contacts-container').innerHTML =

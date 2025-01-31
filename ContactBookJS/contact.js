@@ -63,6 +63,12 @@
         saveToStorage();
     }
 
+    export function deleteAllContacts(){
+     contactList.splice(0, contactList.length);
+        saveToStorage();
+    }
+
+
 
 
 

@@ -8,7 +8,7 @@ export function renderAddContact(){
         '    <p>\n' +
         '        Add Contact\n' +
         '    </p>\n' +
-        '    <form id="new-contact-form">\n' +
+        '    <form class="new-contact-form" id="new-contact-form">\n' +
         '        <label for="new-contact-type">Contact Type</label>\n' +
         '        <input class="contact-type" type="text" id="new-contact-type"\n' +
         '               name="contact-type" required>\n' +
@@ -73,7 +73,14 @@ export function renderAddContact(){
                 );
             runScript();
         })
-}
+    document.querySelector('.new-contact-form').addEventListener('keydown', (event) => {
+        if (event.key === 'Enter')
+        {
+            document.querySelector('.create-contact-button').click();
+        }
+    })
+    }
+
 
 function addNewContactToList(contactType, contactName, firstName,
                              lastName, address, phoneNumber, email) {

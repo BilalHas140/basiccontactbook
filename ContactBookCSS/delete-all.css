@@ -1,0 +1,42 @@
+.delete-all-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-all-box
+{
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #9de59d;
+    margin-top: 200px ;
+    width: 400px;
+    height: 100px;
+}
+
+.delete-all-box-text{
+    font-size: 25px;
+}
+
+.verify-delete-all-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: medium;
+    height: 30px;
+    width: 400px;
+    border-radius: 7px;
+    border-width: thin;
+    background-color: #cce7cc;
+    color: #a63a3a;
+    margin-right: 10px;
+}
+
+.verify-delete-all-button:hover{
+    background-color: #9de59d;
+}
