@@ -34,9 +34,9 @@ export function runScript() {
         <p class="people-log-text">PEOPLE LOG</p>
     </div>
     <div class="options-panel">
-        <div class="option-block">
+        <button class="option-block account-settings-button">
             Account Settings
-        </div>
+        </button>
         
         <div class="option-block">
             Search Contacts
@@ -45,10 +45,7 @@ export function runScript() {
         <div class="option-block">
             Grid View
         </div>
-        
-        <div class="option-block">
-            Log Out
-        </div>
+
     </div>
     
     <div class="main-container">
@@ -81,6 +78,11 @@ export function runScript() {
         <div class="home-contacts-container" id="div-container">
         </div>
     </div>`
+
+    document.querySelector('.account-settings-button')
+        .addEventListener('click', () => {
+            location.href = 'account.html';
+        })
 
     document.querySelector('.add-contact-button')
         .addEventListener('click', () => {

@@ -25,7 +25,7 @@
 .options-panel
 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     height: 55%;
     gap: 10px;
 }
@@ -118,4 +118,13 @@
     font-size: larger;
     height: 250px;
     width: 250px
+}
+
+.account-settings-button
+{
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    border-right: #a63a3a 1px solid;
+    background: none;
 }
