@@ -1,10 +1,6 @@
-import {accountList, updateAccount} from "./accountList.js";
+import {accountList, deleteAccount, updateAccount} from "./accountList.js";
 
 runScript();
-
-
-
-
 
 export function runScript() {
     let userName = '';
@@ -12,11 +8,11 @@ export function runScript() {
     let firstName = '';
     let lastName = '';
     let address = '';
-    let phoneNumber ='';
+    let phoneNumber = '';
     let email = '';
 
     accountList.map((account) => {
-        if('friend' === account.userName){
+        if ('friend' === account.userName) {
             userName = account.userName;
             password = account.password;
             firstName = account.firstName;
@@ -27,7 +23,7 @@ export function runScript() {
         }
     })
     document.querySelector('.js-account-body').innerHTML =
-    `<div class="title-panel">
+        `<div class="title-panel">
         <p class="account-settings-text">AccountSettings</p>
     </div>
  
@@ -101,7 +97,7 @@ export function runScript() {
 
 
     document.querySelector('.update-selected-button')
-        .addEventListener('click',() => {
+        .addEventListener('click', () => {
             let newUserName, newPassword, newFirstName,
                 newLastName, newAddress, newPhoneNumber, newEmail;
 
@@ -162,7 +158,57 @@ export function runScript() {
         })
     document.querySelector('.delete-account-button')
         .addEventListener('click', () => {
-            addRemoveButtons();
+            renderConfirmDelete()
         })
+
+    function renderConfirmDelete() {
+        document.querySelector('.js-account-body').innerHTML =
+            `<div class="title-panel">
+        <p class="account-settings-text">AccountSettings</p>
+    </div>
+ 
+    <div class="main-container">
+         <div class="account-actions-panel">
+            <div class="side-option-block">
+                <button class="side-option-button return-home-button">O</button>
+                <li class="bullet"></li>
+                Return Home
+            </div>
+            
+            <div class="side-option-block">   
+                <button class="side-option-button log-out-button">O</button>         
+                <li class="bullet"></li>
+                Log Out
+            </div>
+            
+            <div class="side-option-block">
+                <button class="side-option-button delete-account-button">O</button>
+                <li class="bullet"></li>
+                Dont Delete
+            </div>                
+        </div> 
+
+            <div class="confirm-delete-container">
+            <div class="confirm-delete-box">
+                <p class="confirm-delete-box-text">
+                    Are You Sure You Would Like To Delete
+                </p>
+            </div>
+
+            <div class="option-buttons">
+                        <button class="confirm-delete-button js-confirm-delete-button">
+                            Delete
+                        </button>
+            </div>`
+
+        document.querySelector('.js-confirm-delete-button')
+            .addEventListener('click', () => {
+                deleteAccount(userName);
+                runScript();
+            });
+        document.querySelector('.delete-account-button')
+            .addEventListener('click', () => {
+                runScript();
+            })
     }
-    console.log(accountList);
+}

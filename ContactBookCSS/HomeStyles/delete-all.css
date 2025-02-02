@@ -1,10 +1,12 @@
-.delete-all-container
+.delete-all-container,
+.confirm-delete-container
 {
     display: flex;
     flex-direction: column;
 }
 
-.delete-all-box
+.delete-all-box,
+.confirm-delete-box
 {
     display: flex;
     flex-direction: column;
@@ -18,11 +20,14 @@
     height: 100px;
 }
 
-.delete-all-box-text{
+.delete-all-box-text
+{
     font-size: 25px;
 }
 
-.verify-delete-all-button {
+.verify-delete-all-button,
+.confirm-delete-button
+{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +42,17 @@
     margin-right: 10px;
 }
 
-.verify-delete-all-button:hover{
+.verify-delete-all-button:hover,
+.confirm-delete-button:hover
+{
     background-color: #9de59d;
+}
+
+.confirm-delete-container
+{
+    margin-left: 200px;
+}
+.confirm-delete-box-text
+{
+    font-size: large;
 }
