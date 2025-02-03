@@ -120,7 +120,8 @@
     width: 250px
 }
 
-.account-settings-button
+.account-settings-button,
+.search-contacts-button
 {
     border-bottom: none;
     border-left: none;

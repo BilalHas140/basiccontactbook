@@ -3,6 +3,7 @@ import {renderAddContact} from "./add-contact.js";
 import {addSelectionButtons} from "./update-contact.js";
 import {addRemoveButtons} from "./delete-contact.js";
 import {verifyDeleteAll} from "./delete-all-contacts.js";
+import {renderSearchedContact} from "./search-contacts.js";
 
 runScript();
 
@@ -38,14 +39,13 @@ export function runScript() {
             Account Settings
         </button>
         
-        <div class="option-block">
+        <button class="option-block search-contacts-button" >
             Search Contacts
-        </div>
+        </button>
         
         <div class="option-block">
             Grid View
         </div>
-
     </div>
     
     <div class="main-container">
@@ -79,9 +79,14 @@ export function runScript() {
         </div>
     </div>`
 
+
     document.querySelector('.account-settings-button')
         .addEventListener('click', () => {
             location.href = 'account.html';
+        })
+    document.querySelector('.search-contacts-button')
+        .addEventListener('click', () => {
+                renderSearchedContact();
         })
 
     document.querySelector('.add-contact-button')

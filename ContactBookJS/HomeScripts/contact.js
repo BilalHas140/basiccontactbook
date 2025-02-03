@@ -37,6 +37,16 @@
         saveToStorage();
     }
 
+   export function searchContacts(contactName) {
+        let exampleContact = {}
+        contactList.map((contact)=>{
+            if(contact.contactName === contactName){
+              exampleContact = contact;
+            }
+        })
+       return exampleContact;
+    }
+
    export function updateContact(updateContactName, newContactType, newContactName, newFirstName,
                            newLastName, newAddress, newPhoneNumber, newEmail){
 
@@ -67,9 +77,4 @@
      contactList.splice(0, contactList.length);
         saveToStorage();
     }
-
-
-
-
-
 
