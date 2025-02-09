@@ -1,0 +1,54 @@
+.contact-search-container
+{
+    display: flex;
+    flex-direction: column;
+}
+.contact-search-box
+{
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #9de59d;
+    margin-top: 200px ;
+    width: 400px;
+    height: 200px;
+}
+
+.contactName
+{
+    margin-left: 10px;
+    background-color: #a86c6c;
+    color: #9de59d;
+    border: none;
+    border-radius: 5px;
+}
+.contactName:focus
+{
+    outline: none;
+    caret-color: #a63a3a;
+    background-color: #a63a3a;
+}
+
+
+.submit-search-button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: medium;
+    height: 30px;
+    width: 400px;
+    border-radius: 7px;
+    border-width: thin;
+    background-color: #cce7cc;
+    color: #a63a3a;
+
+}
+.submit-search-button:hover
+{
+    background-color: #9de59d;
+}

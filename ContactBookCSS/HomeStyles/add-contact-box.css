@@ -1,0 +1,80 @@
+.add-home-contact-container,
+.home-searched-contact-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-contact-box,
+.searched-contact-box
+{
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #9de59d;
+    margin-top: 20px ;
+    width: 400px;
+    height: 500px;
+}
+
+.contact-type,
+.contact-name,
+.first-name,
+.last-name,
+.address,
+.phone-number,
+.email
+{
+    margin-left: 10px;
+    background-color: #a86c6c;
+    color: #9de59d;
+    border: none;
+    border-radius: 5px;
+}
+.contact-type:focus,
+.contact-name:focus,
+.first-name:focus,
+.last-name:focus,
+.address:focus,
+.phone-number:focus,
+.email:focus
+{
+    outline: none;
+    caret-color: #a63a3a;
+    background-color: #a63a3a;
+}
+.first-name,
+.last-name
+{
+    margin-left: 40px;
+}
+.address
+{
+    margin-left: 55px;
+}
+.email
+{
+    margin-left: 70px;
+}
+
+.create-contact-button,
+.return-to-contacts-button
+{
+    font-size: medium;
+    height: 30px;
+    width: 400px;
+    border-radius: 7px;
+    border-width: thin;
+    background-color: #cce7cc;
+    color: #a63a3a;
+    margin-top: 30px;
+}
+.create-contact-button:hover,
+.return-to-contacts-button:hover
+{
+    background-color: #9de59d;
+}

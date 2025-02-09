@@ -1,0 +1,131 @@
+.js-home-body
+{
+    display: block;
+    position: relative;
+    bottom: 30px;
+}
+
+.title-panel,
+.options-panel
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-panel,
+.option-block,
+.side-option-block
+{
+    font-weight: bolder;
+    text-shadow: -2px -2px 2px #9de59d;
+    letter-spacing: 20px;
+}
+
+.options-panel
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 55%;
+    gap: 10px;
+}
+
+.option-block,
+.side-option-block
+{
+    text-align: center;
+    letter-spacing: 5px;
+    border-right: #a63a3a 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+
+.main-container
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.contact-actions-panel
+{
+    position: absolute;
+    width: 145px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: space-evenly;
+}
+.side-option-block
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    font-size: small;
+    border: none;
+}
+.bullet
+{
+    list-style-type: "-->";
+    position: absolute;
+    left: 0;
+    line-height: 2;
+    margin-right: 100px;
+    color: black;
+}
+.side-option-button
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 27px;
+    border-style: inset;
+    border-width: 10px;
+    border-color: #9de59d;
+    background-color: #a86c6c;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+.side-option-button:hover
+{
+    border-style: outset;
+}
+.side-option-button:active
+{
+    border-color: #a86c6c;
+}
+
+.home-contacts-container
+{
+    margin-left: 225px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 100px;
+    grid-column-gap: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-block
+{
+    white-space: pre-line;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    text-shadow: -2px -2px 2px #a63a3a;
+    font-size: larger;
+    height: 250px;
+    width: 250px
+}
+
+.account-settings-button,
+.search-contacts-button
+{
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    border-right: #a63a3a 1px solid;
+    background: none;
+}

@@ -1,0 +1,16 @@
+.account-created-box {
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #9de59d;
+    margin-top: 200px ;
+    width: 400px;
+    height: 100px;
+}
+
+.account-created-box-text{
+    font-size: 25px;
+}
