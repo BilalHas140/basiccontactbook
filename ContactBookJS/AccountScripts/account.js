@@ -1,8 +1,8 @@
 import {accountList, deleteAccount, updateAccount} from "./accountList.js";
 
-runScript();
+runScript(JSON.parse(localStorage.getItem('currentAccountUserName')));
 
-export function runScript() {
+export function runScript(currentUserName) {
     let userName = '';
     let password = '';
     let firstName = '';
@@ -12,7 +12,7 @@ export function runScript() {
     let email = '';
 
     accountList.map((account) => {
-        if ('friend' === account.userName) {
+        if (currentUserName === account.userName) {
             userName = account.userName;
             password = account.password;
             firstName = account.firstName;

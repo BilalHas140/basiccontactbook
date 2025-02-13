@@ -8,13 +8,13 @@ export function loadFromStorage(){
     if (!accountList){
         accountList =
             [{
-                userName: 'friend',
-                password: 'BJ',
-                firstName: 'Brian',
-                lastName: 'Jordan',
-                address: '4542 long st',
-                phoneNumber: '543345543',
-                email: 'bj@mail'
+                userName: 'Sample',
+                password: 'Sample',
+                firstName: 'Sample',
+                lastName: 'Sample',
+                address: 'Sample',
+                phoneNumber: 'Sample',
+                email: 'Sample'
             }]
     }
 }
@@ -25,7 +25,8 @@ function saveToStorage(){
 
 export function addAccount(userName, password, firstName,
                            lastName, address, phoneNumber, email) {
-    accountList.push({
+    accountList.push
+    ({
         userName: userName,
         password: password,
         firstName: firstName,
@@ -33,7 +34,8 @@ export function addAccount(userName, password, firstName,
         address: address,
         phoneNumber: phoneNumber,
         email: email
-    });
+    })
+    deleteAccount('Sample')
     saveToStorage();
 }
 
@@ -62,6 +64,7 @@ export function deleteAccount(userName){
     })
     saveToStorage();
 }
+console.log(accountList);
 
 
 
