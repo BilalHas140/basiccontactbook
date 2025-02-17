@@ -64,11 +64,4 @@ export function deleteAccount(userName){
     })
     saveToStorage();
 }
-console.log(accountList);
-
-
-
-
-
-
 

@@ -1,6 +1,13 @@
 import {accountList, deleteAccount, updateAccount} from "./accountList.js";
+// import {currentAccountUserName} from "../HomeScripts/home.js";
+// import {sampleUser} from "../HomeScripts/contact.js";
+//
+// import {contactList} from "../HomeScripts/contact.js";
+// import {sampleUser, sampleUser2} from "../HomeScripts/contact.js";
 
-runScript(JSON.parse(localStorage.getItem('currentAccountUserName')));
+const currentAccountUserName = (JSON.parse(localStorage.getItem('currentAccountUserName')))
+// export const currentAccountUserName = (JSON.parse(localStorage.getItem('currentAccountUserName')))
+runScript(currentAccountUserName);
 
 export function runScript(currentUserName) {
     let userName = '';
@@ -12,6 +19,9 @@ export function runScript(currentUserName) {
     let email = '';
 
     accountList.map((account) => {
+        if(!currentUserName){
+            currentUserName = 'Sample';
+        }
         if (currentUserName === account.userName) {
             userName = account.userName;
             password = account.password;

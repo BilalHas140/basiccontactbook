@@ -16,7 +16,7 @@
     background-color: #9de59d;
     margin-top: 20px ;
     width: 400px;
-    height: 500px;
+    height: 700px;
 }
 
 .contact-type,
@@ -32,6 +32,7 @@
     color: #9de59d;
     border: none;
     border-radius: 5px;
+    width: 100%;
 }
 .contact-type:focus,
 .contact-name:focus,
@@ -44,19 +45,6 @@
     outline: none;
     caret-color: #a63a3a;
     background-color: #a63a3a;
-}
-.first-name,
-.last-name
-{
-    margin-left: 40px;
-}
-.address
-{
-    margin-left: 55px;
-}
-.email
-{
-    margin-left: 70px;
 }
 
 .delete-selected-button,

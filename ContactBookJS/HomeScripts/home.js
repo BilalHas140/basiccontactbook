@@ -24,12 +24,19 @@ runScript();
                 if (parentElement) {
                     parentElement.appendChild(newDiv);
                 }
-        })
+            })
         return newDiv.textContent;
     }
 
 
 export function runScript() {
+    let currentAccountUserName = (
+        JSON.parse(localStorage.getItem('currentAccountUserName')))
+
+    localStorage.setItem(`${currentAccountUserName}contactList`,
+        JSON.stringify(contactList));
+
+
     document.querySelector('.js-home-body').innerHTML =
     `<div class="title-panel">
         <p class="people-log-text">PEOPLE LOG</p>

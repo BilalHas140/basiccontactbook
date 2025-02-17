@@ -9,7 +9,6 @@ runScript();
 export function runScript() {
     renderLoginBox();
 
-
     document.querySelector('.js-create-account-button')
         .addEventListener('click', () => {
             renderCreateAccount()
@@ -49,7 +48,3 @@ export function runScript() {
                 }
         })
 }
-
-
-
-

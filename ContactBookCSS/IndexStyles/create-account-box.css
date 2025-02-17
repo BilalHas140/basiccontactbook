@@ -9,13 +9,14 @@
     background-color: #9de59d;
     margin-top: 20px ;
     width: 400px;
-    height: 500px;
+    height: 700px;
 }
 
 .user-name,
 .password,
 .first-name,
 .last-name,
+.address,
 .phone-number,
 .email
 {
@@ -24,24 +25,17 @@
     color: #9de59d;
     border: none;
     border-radius: 5px;
+    width: 100%;
 }
 .user-name:focus,
 .password:focus,
 .first-name:focus,
 .last-name:focus,
+.address:focus,
 .phone-number:focus,
 .email:focus
 {
     outline: none;
     caret-color: #a63a3a;
     background-color: #a63a3a;
-}
-.password {
-    margin-left: 17px;
-}
-.phone-number{
-    width: 139px;
-}
-.email{
-    width: 210px;
 }

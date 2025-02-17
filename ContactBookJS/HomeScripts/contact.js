@@ -1,41 +1,45 @@
 
-    export let contactList;
+export let contactList;
 
     loadFromStorage();
-    export function loadFromStorage(){
-        contactList = JSON.parse(localStorage.getItem('contactList'));
+
+   export function loadFromStorage(){
+        contactList = JSON.parse(localStorage.getItem(
+            `${JSON.parse(localStorage.getItem('currentAccountUserName'))}contactList`));
 
         if (!contactList){
             contactList =
                 [{
-                    contactType: 'friend',
-                    contactName: 'BJ',
-                    firstName: 'Brian',
-                    lastName: 'Jordan',
-                    address: '4542 long st',
-                    phoneNumber: '543345543',
-                    email: 'bj@mail'
+                    contactType: 'Sample',
+                    contactName: 'Sample',
+                    firstName: 'Sample',
+                    lastName: 'Sample',
+                    address: 'Sample',
+                    phoneNumber: 'Sample',
+                    email: 'Sample'
                 }]
         }
     }
 
     function saveToStorage(){
-        localStorage.setItem('contactList', JSON.stringify(contactList));
-}
+        localStorage.setItem(
+            `${JSON.parse(localStorage.getItem('currentAccountUserName'))}contactList`,
+            JSON.stringify(contactList));
+    }
 
     export function addContact(contactType, contactName, firstName,
                                lastName, address, phoneNumber, email) {
-        contactList.push({
-            contactType: contactType,
-            contactName: contactName,
-            firstName: firstName,
-            lastName: lastName,
-            address: address,
-            phoneNumber: phoneNumber,
-            email: email
-        });
-        saveToStorage();
-    }
+            contactList.push({
+                contactType: contactType,
+                contactName: contactName,
+                firstName: firstName,
+                lastName: lastName,
+                address: address,
+                phoneNumber: phoneNumber,
+                email: email
+            });
+            saveToStorage();
+        }
 
    export function searchContacts(contactName) {
         let exampleContact = {}
@@ -50,7 +54,7 @@
    export function updateContact(updateContactName, newContactType, newContactName, newFirstName,
                            newLastName, newAddress, newPhoneNumber, newEmail){
 
-        contactList.map((contact)=>{
+       contactList.map((contact)=>{
             if (contact.contactName === updateContactName){
                 contact.contactType = newContactType;
                 contact.contactName = newContactName;
